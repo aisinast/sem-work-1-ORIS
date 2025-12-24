@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2e2e2e;
+    background-image: url("../images/world-map.PNG");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.main-container img {
+    width: 200px;
+    height: auto;
+    user-select: none;
+}
+
+.main-container h3 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #2e2e2e;
+    max-width: 480px;
+}
+
+/* ====== Кнопки (ссылки) ====== */
+#horizontal-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#horizontal-container a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+/* — Кнопка "Продолжить без регистрации" — */
+#horizontal-container a {
+    color: #2e2e2e;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+#horizontal-container a:hover {
+    background: #0095d1;
+    color: #fff
+}
+
+/* ====== Адаптивность ====== */
+@media (max-width: 600px) {
+    #main-container img {
+        width: 140px;
+    }
+
+    #main-container h3 {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    #horizontal-container {
+        flex-direction: column;
+        gap: 12px;
+        width: 80%;
+    }
+
+    #horizontal-container a {
+        width: 100%;
+        text-align: center;
+    }
+}

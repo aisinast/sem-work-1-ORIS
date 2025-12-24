@@ -1,0 +1,60 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 0;
+    font: 500 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.pagination .page-btn,
+.pagination .page-link,
+.pagination .size {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1f2937;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    transition: all .18s ease;
+}
+
+.pagination .page-link.active,
+.pagination .size.active {
+    color: #fff;
+    background: #111827;
+    border-color: #111827;
+    cursor: default;
+}
+
+.pagination .page-btn.disabled {
+    color: #9ca3af;
+    background: #f9fafb;
+    border-color: #f3f4f6;
+    pointer-events: none;
+}
+
+.pagination .page-btn:hover,
+.pagination .page-link:hover,
+.pagination .size:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(17,24,39,.08);
+}
+
+.pagination .dots {
+    padding: 0 6px;
+    color: #9ca3af;
+}
+
+.pagination .page-size {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 8px;
+    color: #6b7280;
+}

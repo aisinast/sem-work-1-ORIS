@@ -1,0 +1,109 @@
+:root {
+    --text: #2e2e2e;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --white: #fff;
+    --primary: #0095d1;
+    --primary-hover: #0787bd;
+    --shadow: 0 24px 60px rgba(0,0,0,.10);
+    --radius: 20px;
+    --radius-sm: 12px;
+}
+
+body {
+    color: var(--text);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.container {
+    min-width: 340px;
+    max-width: 550px;
+    width: 100%;
+    margin: 32px auto;
+    background: rgba(255,255,255,0.94);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px 24px 36px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.close-btn {
+    color: #9ca3af;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.close-btn:hover {
+    color: var(--muted);
+}
+
+.place-title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.address {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+#map {
+    width: 100%;
+    height: 230px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+h3 {
+    margin: 0;
+}
+
+.posts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.posts-list > li {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 16px 14px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    transition: box-shadow 0.13s;
+}
+.posts-list > li:hover {
+    box-shadow: 0 6px 26px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 14px 2vw 20px;
+        border-radius: 16px;
+    }
+    .place-title {
+        font-size: 22px;
+    }
+    #map {
+        height: 160px;
+    }
+}

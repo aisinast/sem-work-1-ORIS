@@ -1,0 +1,104 @@
+:root{
+    --text:#2e2e2e; --muted:#6b7280; --line:#e5e7eb; --white:#fff;
+    --primary:#0095d1; --primary-hover:#0787bd;
+    --shadow:0 24px 60px rgba(0,0,0,.10);
+    --radius:20px; --radius-sm:12px;
+    --focus:0 0 0 3px rgba(0,149,209,.18);
+}
+
+.main-container{
+    width:min(980px, calc(100% - 32px));
+    display:grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 16px;
+    align-items:center;
+}
+
+.left-container{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.error-title{
+    margin:0;
+    font-size:92px;
+    line-height:1;
+    font-weight:900;
+    letter-spacing:2px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    text-shadow: 0 10px 30px rgba(0,149,209,.12);
+}
+
+.redirect{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:6px;
+    font-size:18px; color:var(--text);
+}
+
+.subtitle{
+    margin:0;
+    color:var(--muted);
+}
+
+.link{
+    margin:0;
+    color: var(--primary);
+    font-weight:800;
+    cursor:pointer;
+    position:relative;
+}
+.link:hover {
+    color: var(--primary-hover);
+}
+
+.link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-2px;
+    height:3px;
+    background:var(--primary);
+    border-radius:3px;
+    opacity:.4;
+    transition:opacity .15s;
+}
+
+.link:hover::after {
+    opacity:.7;
+}
+
+.right-container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.sad-frog-image{
+    max-width: 320px;
+    width:100%;
+    height:auto;
+    filter: drop-shadow(0 14px 34px rgba(0,0,0,.16));
+}
+
+@media (max-width:860px){
+    .main-container{
+        grid-template-columns: 1fr;
+        text-align:center;
+    }
+    .redirect{ justify-content:center; }
+    .sad-frog-image{ max-width: 260px; }
+    .error-title{ font-size:72px; }
+}
+
+@media (max-width:480px){
+    .main-container{ padding: 18px 16px; border-radius:16px; }
+    .error-title{ font-size:56px; }
+    .redirect{ font-size:16px; }
+}
