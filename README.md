@@ -16,6 +16,21 @@
 * Создание, редактирование и удаление своих постов
 * Настройка личной информации и аватара
 
+
+#### Скриншоты
+
+*Главная страница*
+<img width="1582" height="952" alt="image" src="https://github.com/user-attachments/assets/c528cf13-08f4-4990-8e4d-d08e0fc2f127" />
+
+*Профиль пользователя*
+<img width="1582" height="952" alt="image" src="https://github.com/user-attachments/assets/3df97129-058f-40ae-8dbe-a6ee3b3bce6d" />
+
+*Карточка поста*
+<img width="1582" height="952" alt="image" src="https://github.com/user-attachments/assets/4be8992e-d430-4ae4-b905-29e6c3e8c42f" />
+
+*Карточка места*
+<img width="1582" height="952" alt="image" src="https://github.com/user-attachments/assets/971a1669-1028-42cd-a3dd-57f4025af42e" />
+
 #### Технологический стек
 Проект выполнен с использованием классического стека Java Web:
 *   *Back-end:* Java 17+, Java Servlets, JSP, JDBC
